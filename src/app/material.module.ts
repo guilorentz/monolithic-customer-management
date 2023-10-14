@@ -13,7 +13,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CustomMatPaginatorIntl } from './customer/components/customer-list/custom-paginator-intl';
+import { CustomMatPaginatorIntl } from './common/custom-paginator-intl';
 
 @NgModule({
   exports: [

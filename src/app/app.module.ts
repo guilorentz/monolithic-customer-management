@@ -14,6 +14,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CustomerReducer } from './customer/store/customer/customer.reducers';
 import { CustomerEffects } from './customer/store/customer/customer.effects';
+import { ProductModule } from './product/product.module';
+import { ProductEffects } from './product/store/product/product.effects';
+import { ProductReducer } from './product/store/product/product.reducers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,10 +25,11 @@ import { CustomerEffects } from './customer/store/customer/customer.effects';
     AppRoutingModule,
     BrowserAnimationsModule,
     CustomerModule,
+    ProductModule,
     HttpClientModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ customer: CustomerReducer }, {}),
-    EffectsModule.forRoot([AppEffects, CustomerEffects]),
+    StoreModule.forRoot({ customer: CustomerReducer, product: ProductReducer }),
+    EffectsModule.forRoot([AppEffects, CustomerEffects, ProductEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],

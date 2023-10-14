@@ -201,12 +201,188 @@
       "type": "PJ"
     },
     {
-      "id": 32,
-      "name": "Letícia Lorentz",
-      "phone": "(67) 98765-4321",
-      "email": "leticia@email.com",
-      "address": "Av. das Capivaras, 123.",
+      "id": 33,
+      "name": "Guilherme Lorentz",
+      "phone": "(67) 91234-5678",
+      "email": "guilherme@email.com",
+      "address": "Rua das Capivaras, 123.",
       "type": "PF"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone X",
+      "description": "Um smartphone avançado com câmera de alta resolução.",
+      "price": 699.99
+    },
+    {
+      "id": 2,
+      "name": "Laptop Pro",
+      "description": "Um laptop de última geração com desempenho incrível.",
+      "price": 1299.99
+    },
+    {
+      "id": 3,
+      "name": "Fone de Ouvido Bluetooth",
+      "description": "Fones de ouvido sem fio para uma experiência de áudio perfeita.",
+      "price": 79.99
+    },
+    {
+      "id": 4,
+      "name": "Smart TV 4K",
+      "description": "Uma Smart TV com qualidade de imagem Ultra HD 4K.",
+      "price": 599.99
+    },
+    {
+      "id": 5,
+      "name": "Câmera DSLR",
+      "description": "Uma câmera digital profissional para fotógrafos experientes.",
+      "price": 799.99
+    },
+    {
+      "id": 6,
+      "name": "Tablet Premium Retina",
+      "description": "Um tablet de alta qualidade com tela retina.",
+      "price": 349.99
+    },
+    {
+      "id": 7,
+      "name": "Monitor Curvo",
+      "description": "Um monitor de computador com tela curva para imersão total.",
+      "price": 349.99
+    },
+    {
+      "id": 8,
+      "name": "Impressora Multifuncional",
+      "description": "Uma impressora que imprime, digitaliza e copia com facilidade.",
+      "price": 119.99
+    },
+    {
+      "id": 9,
+      "name": "Teclado Mecânico RGB",
+      "description": "Um teclado mecânico com retroiluminação RGB personalizável.",
+      "price": 99.99
+    },
+    {
+      "id": 10,
+      "name": "Mouse Gamer",
+      "description": "Um mouse projetado para jogos com alta precisão.",
+      "price": 49.99
+    },
+    {
+      "id": 11,
+      "name": "Caixa de Som Bluetooth",
+      "description": "Uma caixa de som portátil para músicas em movimento.",
+      "price": 39.99
+    },
+    {
+      "id": 12,
+      "name": "HD Externo 2TB",
+      "description": "Um disco rígido externo de 2TB para armazenamento de dados.",
+      "price": 79.99
+    },
+    {
+      "id": 13,
+      "name": "Roteador Wi-Fi 6",
+      "description": "Um roteador de última geração para uma conexão ultrarrápida.",
+      "price": 129.99
+    },
+    {
+      "id": 14,
+      "name": "Cadeira Gamer",
+      "description": "Uma cadeira confortável para sessões prolongadas de jogos.",
+      "price": 199.99
+    },
+    {
+      "id": 15,
+      "name": "Relógio Inteligente",
+      "description": "Um smartwatch com monitor de saúde e notificações inteligentes.",
+      "price": 149.99
+    },
+    {
+      "id": 16,
+      "name": "Máquina de Café Expresso",
+      "description": "Uma máquina de café para café gourmet em casa.",
+      "price": 299.99
+    },
+    {
+      "id": 17,
+      "name": "Mochila para Notebook",
+      "description": "Uma mochila resistente para laptops e acessórios.",
+      "price": 29.99
+    },
+    {
+      "id": 19,
+      "name": "Liquidificador Potente",
+      "description": "Um liquidificador potente para smoothies e bebidas saudáveis.",
+      "price": 59.99
+    },
+    {
+      "id": 20,
+      "name": "Ventilador de Teto",
+      "description": "Um ventilador de teto silencioso para manter o ambiente fresco.",
+      "price": 99.99
+    },
+    {
+      "id": 21,
+      "name": "Mesa de Escritório",
+      "description": "Uma mesa de escritório espaçosa para um ambiente de trabalho confortável.",
+      "price": 129.99
+    },
+    {
+      "id": 22,
+      "name": "Forno de Micro-ondas",
+      "description": "Um forno de micro-ondas moderno para o aquecimento rápido de alimentos.",
+      "price": 89.99
+    },
+    {
+      "id": 23,
+      "name": "Lavadora de Roupas",
+      "description": "Uma máquina de lavar roupas eficiente para lavanderia sem esforço.",
+      "price": 299.99
+    },
+    {
+      "id": 24,
+      "name": "Secador de Cabelo Profissional",
+      "description": "Um secador de cabelo de qualidade profissional para resultados impecáveis.",
+      "price": 49.99
+    },
+    {
+      "id": 25,
+      "name": "Aspirador de Pó Robô",
+      "description": "Um aspirador de pó robô para manter a casa limpa automaticamente.",
+      "price": 199.99
+    },
+    {
+      "id": 26,
+      "name": "Panela Elétrica de Arroz",
+      "description": "Uma panela elétrica de arroz para cozinhar arroz perfeitamente.",
+      "price": 39.99
+    },
+    {
+      "id": 27,
+      "name": "Fritadeira de Ar Quente",
+      "description": "Uma fritadeira de ar quente para cozinhar alimentos sem óleo.",
+      "price": 79.99
+    },
+    {
+      "id": 28,
+      "name": "Forno Elétrico",
+      "description": "Um forno elétrico versátil para assar e grelhar alimentos.",
+      "price": 149.99
+    },
+    {
+      "id": 29,
+      "name": "Cadeira de Escritório Ergonômica",
+      "description": "Uma cadeira de escritório ergonômica para suporte durante horas de trabalho.",
+      "price": 119.99
+    },
+    {
+      "id": 30,
+      "name": "Mini Geladeira",
+      "description": "Uma mini geladeira para armazenar bebidas e lanches em um espaço compacto.",
+      "price": 79.99
     }
   ]
 }
