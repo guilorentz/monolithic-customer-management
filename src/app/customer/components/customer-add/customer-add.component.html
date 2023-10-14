@@ -1,0 +1,45 @@
+<form [formGroup]="customerForm">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field *ngIf="isEdit">
+        <mat-label>Código</mat-label>
+        <input formControlName="id" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input formControlName="name" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Telefone</mat-label>
+        <input formControlName="phone" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input formControlName="email" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Endereço</mat-label>
+        <textarea formControlName="address" matInput></textarea>
+      </mat-form-field>
+      <mat-radio-group formControlName="type">
+        <mat-radio-button color="primary" value="PF"
+          >Pessoa Física</mat-radio-button
+        >
+        <mat-radio-button color="primary" value="PJ"
+          >Pessoa Jurídica</mat-radio-button
+        >
+      </mat-radio-group>
+    </mat-card-content>
+    <mat-card-actions class="actions">
+      <button mat-raised-button color="accent" (click)="closePopUp()">
+        Cancelar
+      </button>
+      <button mat-raised-button color="primary" (click)="saveCustomer()">
+        Salvar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

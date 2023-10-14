@@ -1,4 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.green-snack-bar {
+  background: green !important;
+  color: white;
+
+  button {
+    background-color: green;
+    color: white !important;
+    border: none;
+  }
+}
+
+.red-snack-bar {
+  background: red !important;
+  color: white;
+
+  button {
+    background-color: red;
+    color: white !important;
+    border: none;
+  }
+}

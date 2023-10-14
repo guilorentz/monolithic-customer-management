@@ -1,0 +1,212 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "João Gabriel da Silva",
+      "phone": "(11) 91234-5678",
+      "email": "joao.silva@gmail.com",
+      "address": "Rua das Flores, 123, São Paulo, SP",
+      "type": "PF"
+    },
+    {
+      "id": 2,
+      "name": "Maria Santos",
+      "phone": "(21) 98765-4321",
+      "email": "maria.santos@hotmail.com",
+      "address": "Avenida Principal, 456, Rio de Janeiro, RJ",
+      "type": "PF"
+    },
+    {
+      "id": 3,
+      "name": "Empresa ABC Ltda",
+      "phone": "(31) 87654-3210",
+      "email": "contato@empresaabc.com",
+      "address": "Rua Comercial, 789, Belo Horizonte, MG",
+      "type": "PJ"
+    },
+    {
+      "id": 5,
+      "name": "Comércio XYZ SA",
+      "phone": "(51) 65432-1098",
+      "email": "contato@comercioxyz.com.br",
+      "address": "Rua da Indústria, 987, Porto Alegre, RS",
+      "type": "PJ"
+    },
+    {
+      "id": 7,
+      "name": "Loja 123 EIRELI",
+      "phone": "(71) 43210-9876",
+      "email": "atendimento@loja123.com",
+      "address": "Rua dos Produtos, 234, Salvador, BA",
+      "type": "PJ"
+    },
+    {
+      "id": 9,
+      "name": "Empresa XYZ S.A.",
+      "phone": "(91) 21098-7654",
+      "email": "contato@empresaxyz.com",
+      "address": "Rua das Empresas, 1098, Belém, PA",
+      "type": "PJ"
+    },
+    {
+      "id": 10,
+      "name": "Carlos Mendes",
+      "phone": "(98) 10987-6543",
+      "email": "carlos.mendes@gmail.com",
+      "address": "Av. das Oportunidades, 876, São Luís, MA",
+      "type": "PF"
+    },
+    {
+      "id": 12,
+      "name": "Comércio ABC Ltda",
+      "phone": "(91) 54321-0987",
+      "email": "contato@comercioabc.com",
+      "address": "Av. Comercial, 123, Manaus, AM",
+      "type": "PJ"
+    },
+    {
+      "id": 13,
+      "name": "Rafaela Costa",
+      "phone": "(31) 65432-1098",
+      "email": "rafaela.costa@gmail.com",
+      "address": "Rua das Lojas, 789, Fortaleza, CE",
+      "type": "PF"
+    },
+    {
+      "id": 14,
+      "name": "Loja 456 EIRELI",
+      "phone": "(51) 32109-8765",
+      "email": "atendimento@loja456.com",
+      "address": "Avenida do Comércio, 987, Porto Alegre, RS",
+      "type": "PJ"
+    },
+    {
+      "id": 15,
+      "name": "Antonio Silva",
+      "phone": "(61) 21098-7654",
+      "email": "antonio.silva@hotmail.com",
+      "address": "Rua dos Negócios, 1098, Brasília, DF",
+      "type": "PF"
+    },
+    {
+      "id": 16,
+      "name": "Isabela Almeida",
+      "phone": "(14) 98765-4321",
+      "email": "isabela.almeida@gmail.com",
+      "address": "Av. das Rosas, 567, Campinas, SP",
+      "type": "PF"
+    },
+    {
+      "id": 17,
+      "name": "Loja 789 Ltda",
+      "phone": "(91) 76543-2109",
+      "email": "atendimento@loja789.com",
+      "address": "Rua das Compras, 123, Belém, PA",
+      "type": "PJ"
+    },
+    {
+      "id": 19,
+      "name": "Empresa ZXY S.A.",
+      "phone": "(51) 32109-8765",
+      "email": "contato@empresazxy.com.br",
+      "address": "Av. das Indústrias, 789, Porto Alegre, RS",
+      "type": "PJ"
+    },
+    {
+      "id": 20,
+      "name": "Sara Lima",
+      "phone": "(61) 21098-7654",
+      "email": "sara.lima@hotmail.com",
+      "address": "Av. da Praia, 1098, Salvador, BA",
+      "type": "PF"
+    },
+    {
+      "id": 21,
+      "name": "Lucas Silva",
+      "phone": "(14) 54321-0987",
+      "email": "lucas.silva@gmail.com",
+      "address": "Rua das Lojas, 321, São Paulo, SP",
+      "type": "PF"
+    },
+    {
+      "id": 22,
+      "name": "Supermercado ABC Ltda",
+      "phone": "(21) 76543-2109",
+      "email": "contato@supermercadoabc.com",
+      "address": "Av. Comercial, 456, Rio de Janeiro, RJ",
+      "type": "PJ"
+    },
+    {
+      "id": 23,
+      "name": "Fernanda Oliveira",
+      "phone": "(31) 65432-1098",
+      "email": "fernanda.oliveira@hotmail.com",
+      "address": "Rua da Compra, 987, Belo Horizonte, MG",
+      "type": "PF"
+    },
+    {
+      "id": 24,
+      "name": "Comércio XYZ S.A.",
+      "phone": "(71) 32109-8765",
+      "email": "atendimento@comercioxyz.com",
+      "address": "Avenida das Vendas, 123, Salvador, BA",
+      "type": "PJ"
+    },
+    {
+      "id": 25,
+      "name": "Pedro Santos",
+      "phone": "(51) 21098-7654",
+      "email": "pedro.santos@gmail.com",
+      "address": "Rua das Oportunidades, 456, Porto Alegre, RS",
+      "type": "PF"
+    },
+    {
+      "id": 26,
+      "name": "Juliana Alves",
+      "phone": "(81) 54321-0987",
+      "email": "juliana.alves@hotmail.com",
+      "address": "Avenida dos Negócios, 321, Recife, PE",
+      "type": "PF"
+    },
+    {
+      "id": 27,
+      "name": "Comércio ABC S.A.",
+      "phone": "(91) 65432-1098",
+      "email": "contato@comercioabc.com",
+      "address": "Rua das Vendas, 456, Belém, PA",
+      "type": "PJ"
+    },
+    {
+      "id": 28,
+      "name": "Paulo Lima",
+      "phone": "(98) 32109-8765",
+      "email": "paulo.lima@gmail.com",
+      "address": "Av. dos Comércios, 123, São Luís, MA",
+      "type": "PF"
+    },
+    {
+      "id": 29,
+      "name": "Ana Silva",
+      "phone": "(11) 21098-7654",
+      "email": "ana.silva@hotmail.com",
+      "address": "Rua das Lojas, 789, São Paulo, SP",
+      "type": "PF"
+    },
+    {
+      "id": 30,
+      "name": "Empresa QWE Ltda",
+      "phone": "(21) 54321-0987",
+      "email": "contato@empresaqwe.com",
+      "address": "Av. das Empresas, 456, Rio de Janeiro, RJ",
+      "type": "PJ"
+    },
+    {
+      "id": 32,
+      "name": "Letícia Lorentz",
+      "phone": "(67) 98765-4321",
+      "email": "leticia@email.com",
+      "address": "Av. das Capivaras, 123.",
+      "type": "PF"
+    }
+  ]
+}

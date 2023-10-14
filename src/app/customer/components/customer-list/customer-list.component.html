@@ -1,0 +1,78 @@
+<mat-card class="list">
+  <mat-card-header class="list__header">
+    <mat-card-title>Lista de Clientes</mat-card-title>
+    <button
+      (click)="addCustomer()"
+      mat-mini-fab
+      matTooltip="Primary"
+      color="primary"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="list__content">
+    <mat-table matSort [dataSource]="dataSource">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Código
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Nome
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef> Telefone </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.phone }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef> E-mail </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.email }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> Endereço </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.address }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Tipo
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.type === "PF" ? "Pessoa Física" : "Pessoa Jurídica" }}
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="updateCustomer(element.id)"
+          >
+            Editar
+          </button>
+          <button
+            class="action"
+            mat-raised-button
+            color="accent"
+            (click)="deleteCustomer(element.id)"
+          >
+            Excluir
+          </button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </mat-card-content>
+  <mat-card-footer class="list__footer">
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 50]"
+      [pageSize]="10"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card-footer>
+</mat-card>
