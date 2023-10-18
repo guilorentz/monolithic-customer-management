@@ -1,0 +1,22 @@
+.list {
+  margin: 2%;
+  min-height: 95%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  &__content {
+    margin-top: 48px;
+  }
+
+  &__footer {
+    margin-top: 32px;
+  }
+}
+
+.action {
+  margin-left: 8px;
+}

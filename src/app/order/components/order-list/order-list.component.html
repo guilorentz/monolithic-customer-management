@@ -1,0 +1,71 @@
+<mat-card class="list">
+  <mat-card-header class="list__header">
+    <mat-card-title>Lista de Pedidos</mat-card-title>
+    <button
+      (click)="addOrder()"
+      mat-mini-fab
+      matTooltip="Primary"
+      color="primary"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-card-content class="list__content">
+    <mat-table matSort [dataSource]="dataSource">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Código
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="customer">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          Cliente
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.customer }}
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="totalItens">
+        <mat-header-cell *matHeaderCellDef>
+          Quantidade de Itens
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.totalItens }}
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="totalValue">
+        <mat-header-cell *matHeaderCellDef> Valor Total </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.totalValue | currency : "BRL" }}
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> Endereço </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.address }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button
+            class="action"
+            mat-raised-button
+            color="accent"
+            (click)="deleteOrder(element.id)"
+          >
+            Excluir
+          </button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </mat-card-content>
+  <mat-card-footer class="list__footer">
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 50]"
+      [pageSize]="10"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card-footer>
+</mat-card>

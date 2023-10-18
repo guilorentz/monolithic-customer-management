@@ -1,3 +1,4 @@
+import { OrderEffects } from './order/store/order/order.effects';
 import { AppEffects } from './common/app.effects';
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,8 @@ import { CustomerEffects } from './customer/store/customer/customer.effects';
 import { ProductModule } from './product/product.module';
 import { ProductEffects } from './product/store/product/product.effects';
 import { ProductReducer } from './product/store/product/product.reducers';
+import { OrderModule } from './order/order.module';
+import { OrderReducer } from './order/store/order/order.reducers';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,10 +29,20 @@ import { ProductReducer } from './product/store/product/product.reducers';
     BrowserAnimationsModule,
     CustomerModule,
     ProductModule,
+    OrderModule,
     HttpClientModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ customer: CustomerReducer, product: ProductReducer }),
-    EffectsModule.forRoot([AppEffects, CustomerEffects, ProductEffects]),
+    StoreModule.forRoot({
+      customer: CustomerReducer,
+      order: OrderReducer,
+      product: ProductReducer,
+    }),
+    EffectsModule.forRoot([
+      AppEffects,
+      CustomerEffects,
+      OrderEffects,
+      ProductEffects,
+    ]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],

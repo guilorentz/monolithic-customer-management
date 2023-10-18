@@ -13,7 +13,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatListModule } from '@angular/material/list';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { CustomMatPaginatorIntl } from './common/custom-paginator-intl';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   exports: [
@@ -28,6 +31,9 @@ import { CustomMatPaginatorIntl } from './common/custom-paginator-intl';
     MatIconModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatListModule,
+    MatAutocompleteModule,
+    MatSelectModule,
   ],
   providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl }],
 })

@@ -384,5 +384,6 @@
       "description": "Uma mini geladeira para armazenar bebidas e lanches em um espaço compacto.",
       "price": 79.99
     }
-  ]
+  ],
+  "orders": []
 }
