@@ -385,5 +385,45 @@
       "price": 79.99
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "id": 3,
+      "customer": "Maria Santos",
+      "products": [
+        "Smartphone X",
+        "Smart TV 4K",
+        "Câmera DSLR",
+        "Tablet Premium Retina",
+        "Monitor Curvo",
+        "Impressora Multifuncional",
+        "Mouse Gamer",
+        "Caixa de Som Bluetooth"
+      ],
+      "totalItens": 8,
+      "totalValue": 3009.919999999999
+    },
+    {
+      "id": 4,
+      "customer": "João Gabriel da Silva",
+      "products": [
+        "Smartphone X",
+        "Laptop Pro",
+        "Fone de Ouvido Bluetooth",
+        "Smart TV 4K",
+        "Câmera DSLR"
+      ],
+      "totalItens": 5,
+      "totalValue": 3479.95
+    },
+    {
+      "id": 5,
+      "customer": "Empresa QWE Ltda",
+      "products": [
+        "Smartphone X",
+        "Laptop Pro"
+      ],
+      "totalItens": 2,
+      "totalValue": 1999.98
+    }
+  ]
 }

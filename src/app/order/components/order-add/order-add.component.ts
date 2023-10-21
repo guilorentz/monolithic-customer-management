@@ -1,7 +1,7 @@
 import { Order } from './../../store/model/order';
 import { loadProducts } from './../../../product/store/product/product.actions';
 import { loadCustomers } from './../../../customer/store/customer/customer.actions';
-import { addOrder, updateOrder } from './../../store/order/order.actions';
+import { addOrder } from './../../store/order/order.actions';
 import { getProducts } from './../../../product/store/product/product.selectors';
 import { getCustomers } from './../../../customer/store/customer/customer.selectors';
 import { Product } from './../../../product/store/model/product';
@@ -22,6 +22,7 @@ export class OrderAddComponent implements OnInit {
   title = 'Adicionar pedido';
   isEdit: boolean = false;
   dialogData: any;
+  orderForm!: FormGroup;
   customers!: Customer[];
   products!: Product[];
   private customersSubscription!: Subscription;
@@ -39,27 +40,24 @@ export class OrderAddComponent implements OnInit {
     this.title = this.dialogData.title;
     this.loadCustomersAndProducts();
     this.store.select(getOrder).subscribe((res) => {});
+
+    this.orderForm = this.fb.group({
+      id: [0, Validators.required],
+      customer: ['', Validators.required],
+      products: [[], Validators.required],
+      totalItens: [0],
+      totalValue: [0],
+    });
+
+    this.orderForm
+      .get('products')!
+      .valueChanges.subscribe((selectedProducts) => {
+        const totalItens = selectedProducts.length;
+        const totalValue = this.calculateTotalValue(selectedProducts);
+
+        this.orderForm.patchValue({ totalItens, totalValue });
+      });
   }
-
-  orderForm = this.fb.group({
-    id: [0, Validators.required],
-    customer: ['', Validators.required],
-    products: [[], Validators.required],
-    totalItens: [0, Validators.required],
-    totalValue: [0],
-  });
-
-  //   this.orderForm
-  //     .get('selectedProducts')!
-  //     .valueChanges.subscribe((selectedProducts) => {
-  //       this.selectedProducts = selectedProducts;
-  //       this.totalItems = selectedProducts.length;
-  //       this.totalValue = selectedProducts.reduce(
-  //         (total: any, product: any) => total + product.price,
-  //         0
-  //       );
-  //     });
-  // }
 
   loadCustomersAndProducts() {
     this.store.dispatch(loadCustomers());
@@ -77,7 +75,18 @@ export class OrderAddComponent implements OnInit {
       });
   }
 
+  calculateTotalValue(selectedProducts: string[]) {
+    let totalValue = 0;
+    for (const product of selectedProducts) {
+      const productPrice =
+        this.products.find((p) => p.name === product)?.price || 0;
+      totalValue += productPrice;
+    }
+    return totalValue;
+  }
+
   saveOrder() {
+    console.log(this.orderForm.value);
     if (this.orderForm.valid) {
       const _order: Order = {
         id: this.orderForm.value.id as number,
@@ -86,11 +95,8 @@ export class OrderAddComponent implements OnInit {
         totalItens: this.orderForm.value.totalItens as number,
         totalValue: this.orderForm.value.totalValue as number,
       };
-      if (_order.id === 0) {
-        this.store.dispatch(addOrder({ order: _order }));
-      } else {
-        this.store.dispatch(updateOrder({ order: _order }));
-      }
+
+      this.store.dispatch(addOrder({ order: _order }));
       this.closePopUp();
     }
   }

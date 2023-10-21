@@ -15,7 +15,7 @@
           placeholder="Escolha um cliente"
           aria-label="Number"
           matInput
-          formControlname="customer"
+          formControlName="customer"
           [matAutocomplete]="auto"
         />
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
@@ -29,12 +29,25 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Produtos</mat-label>
-        <mat-select formControlname="products" multiple>
+        <mat-select formControlName="products" multiple>
           <mat-option *ngFor="let product of products" [value]="product.name"
             >{{ product.name }} -
             {{ product.price | currency : "BRL" }}</mat-option
           >
         </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Total de itens</mat-label>
+        <input matInput disabled value="{{ orderForm.value.totalItens }}" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Valor total</mat-label>
+        <input
+          matInput
+          disabled
+          value="{{ orderForm.value.totalValue | currency : 'BRL' }}"
+        />
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions class="actions">
