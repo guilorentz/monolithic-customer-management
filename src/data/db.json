@@ -424,6 +424,47 @@
       ],
       "totalItens": 2,
       "totalValue": 1999.98
+    },
+    {
+      "id": 6,
+      "customer": "Maria Santos",
+      "products": [
+        "Smartphone X"
+      ],
+      "totalItens": 1,
+      "totalValue": 699.99
+    },
+    {
+      "id": 7,
+      "customer": "Guilherme",
+      "products": [
+        "Smartphone X",
+        "Laptop Pro"
+      ],
+      "totalItens": 2,
+      "totalValue": 1999.98
+    },
+    {
+      "id": 8,
+      "customer": "Maria Santos",
+      "products": [
+        "Câmera DSLR",
+        "Lavadora de Roupas"
+      ],
+      "totalItens": 2,
+      "totalValue": 1099.98
+    },
+    {
+      "id": 9,
+      "customer": "Guilherme Lorentz",
+      "products": [
+        "Fritadeira de Ar Quente",
+        "Forno Elétrico",
+        "Cadeira de Escritório Ergonômica",
+        "Mini Geladeira"
+      ],
+      "totalItens": 4,
+      "totalValue": 429.96000000000004
     }
   ]
 }

@@ -20,9 +20,11 @@ import { ProductEffects } from './product/store/product/product.effects';
 import { ProductReducer } from './product/store/product/product.reducers';
 import { OrderModule } from './order/order.module';
 import { OrderReducer } from './order/store/order/order.reducers';
+import { NavbarComponent } from './common/components/navbar/navbar.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,6 +32,7 @@ import { OrderReducer } from './order/store/order/order.reducers';
     CustomerModule,
     ProductModule,
     OrderModule,
+    MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
     StoreModule.forRoot({

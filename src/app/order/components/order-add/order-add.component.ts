@@ -38,7 +38,7 @@ export class OrderAddComponent implements OnInit {
   ngOnInit(): void {
     this.dialogData = this.data;
     this.title = this.dialogData.title;
-    this.loadCustomersAndProducts();
+    this._loadCustomersAndProducts();
     this.store.select(getOrder).subscribe((res) => {});
 
     this.orderForm = this.fb.group({
@@ -53,13 +53,13 @@ export class OrderAddComponent implements OnInit {
       .get('products')!
       .valueChanges.subscribe((selectedProducts) => {
         const totalItens = selectedProducts.length;
-        const totalValue = this.calculateTotalValue(selectedProducts);
+        const totalValue = this._calculateTotalValue(selectedProducts);
 
         this.orderForm.patchValue({ totalItens, totalValue });
       });
   }
 
-  loadCustomersAndProducts() {
+  private _loadCustomersAndProducts() {
     this.store.dispatch(loadCustomers());
     this.store.dispatch(loadProducts());
     this.customersSubscription = this.store
@@ -75,7 +75,7 @@ export class OrderAddComponent implements OnInit {
       });
   }
 
-  calculateTotalValue(selectedProducts: string[]) {
+  private _calculateTotalValue(selectedProducts: string[]) {
     let totalValue = 0;
     for (const product of selectedProducts) {
       const productPrice =

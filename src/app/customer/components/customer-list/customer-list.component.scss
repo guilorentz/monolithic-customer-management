@@ -1,15 +1,11 @@
 .list {
   margin: 2%;
-  min-height: 95%;
+  min-height: 90%;
 
   &__header {
     display: flex;
     justify-content: space-between;
     padding: 24px;
-  }
-
-  &__content {
-    margin-top: 48px;
   }
 
   &__footer {

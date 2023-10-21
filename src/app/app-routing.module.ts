@@ -5,12 +5,14 @@ import { CustomerListComponent } from './customer/components/customer-list/custo
 import { ProductListComponent } from './product/components/product-list/product-list.component';
 
 const routes: Routes = [
-  { path: '', component: OrderListComponent },
+  { path: '', redirectTo: 'customers', pathMatch: 'full' },
   {
     path: 'customers',
     component: CustomerListComponent,
   },
   { path: 'products', component: ProductListComponent },
+  { path: 'orders', component: OrderListComponent },
+  { path: '**', redirectTo: 'customers' },
 ];
 
 @NgModule({

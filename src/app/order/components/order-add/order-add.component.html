@@ -10,22 +10,14 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Cliente</mat-label>
-        <input
-          type="text"
-          placeholder="Escolha um cliente"
-          aria-label="Number"
-          matInput
-          formControlName="customer"
-          [matAutocomplete]="auto"
-        />
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-select formControlName="customer">
           <mat-option
             *ngFor="let customer of customers"
             [value]="customer.name"
           >
             {{ customer.name }}
           </mat-option>
-        </mat-autocomplete>
+        </mat-select>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Produtos</mat-label>
